@@ -81,7 +81,7 @@ export default function HomePage() {
 
         {/* Tools Grid */}
         {filteredTools.length > 0 ? (
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 items-start">
             {filteredTools.map((tool) => (
               <ToolCard
                 key={tool.id}

@@ -85,8 +85,8 @@ export function ToolCard({ tool, onToolClick }: ToolCardProps) {
   };
 
   return (
-    <Card className="hover:shadow-lg transition-shadow duration-200 cursor-pointer group">
-      <CardHeader className="pb-3">
+    <Card className="hover:shadow-lg transition-shadow duration-200 cursor-pointer group flex flex-col h-full">
+      <CardHeader className="pb-3 flex-shrink-0">
         <div className="flex items-center justify-between">
           <div className={`w-12 h-12 rounded-lg ${color} flex items-center justify-center text-white`}>
             {icon}
@@ -98,11 +98,11 @@ export function ToolCard({ tool, onToolClick }: ToolCardProps) {
         <CardTitle className="text-lg group-hover:text-blue-600 transition-colors">
           {getToolName(tool.name)}
         </CardTitle>
-        <CardDescription className="text-sm text-muted-foreground">
+        <CardDescription className="text-sm text-muted-foreground h-16 overflow-hidden">
           {getToolDescription(tool.name)}
         </CardDescription>
       </CardHeader>
-      <CardContent className="pt-0">
+      <CardContent className="pt-4 mt-auto">
         <Button 
           onClick={() => onToolClick(tool)}
           className="w-full"
