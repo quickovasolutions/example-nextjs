@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ChevronDown, Globe } from 'lucide-react';
 import { useLanguage } from '@/contexts/language-context';
@@ -90,12 +91,16 @@ export function Header() {
             
             {/* Auth Buttons */}
             <div className="flex items-center space-x-3">
-              <Button variant="outline" size="sm">
-                {t('header.login')}
-              </Button>
-              <Button size="sm">
-                {t('header.signUp')}
-              </Button>
+              <Link href="/login">
+                <Button variant="outline" size="sm">
+                  {t('header.login')}
+                </Button>
+              </Link>
+              <Link href="/signup">
+                <Button size="sm">
+                  {t('header.signUp')}
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

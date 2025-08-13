@@ -69,6 +69,35 @@ const enMessages: Record<string, string> = {
   'toolDescriptions.qrCodeGenerator': 'Create custom QR codes for URLs, text, or contact information with styling options.',
   'toolDescriptions.colorPaletteGenerator': 'Generate beautiful color palettes with complementary and analogous color schemes.',
   'toolDescriptions.textToSpeech': 'Convert text to natural-sounding speech with multiple voice options and languages.',
+  
+  // Auth
+  'auth.welcomeBack': 'Welcome back',
+  'auth.signInToContinue': 'Sign in to your account to continue',
+  'auth.emailAddress': 'Email address',
+  'auth.enterEmail': 'Enter your email',
+  'auth.password': 'Password',
+  'auth.enterPassword': 'Enter your password',
+  'auth.rememberMe': 'Remember me',
+  'auth.forgotPassword': 'Forgot password?',
+  'auth.signIn': 'Sign in',
+  'auth.orContinueWith': 'Or continue with',
+  'auth.dontHaveAccount': 'Don\'t have an account?',
+  'auth.signUp': 'Sign up',
+  'auth.backToHome': 'Back to Home',
+  'auth.termsAgreement': 'By signing in, you agree to our Terms of Service and Privacy Policy',
+  'auth.createAccount': 'Create your account',
+  'auth.joinThousands': 'Join thousands of users and start using our tools today',
+  'auth.fullName': 'Full Name',
+  'auth.enterFullName': 'Enter your full name',
+  'auth.confirmPassword': 'Confirm Password',
+  'auth.confirmYourPassword': 'Confirm your password',
+  'auth.alreadyHaveAccount': 'Already have an account?',
+  'auth.github': 'GitHub',
+  'auth.google': 'Google',
+  'auth.forgotPasswordTitle': 'Forgot your password?',
+  'auth.forgotPasswordDescription': 'Enter your email address and we\'ll send you a link to reset your password.',
+  'auth.sendResetLink': 'Send Reset Link',
+  'auth.rememberPassword': 'Remember your password?'
 };
 
 // Chinese translations
@@ -127,6 +156,35 @@ const zhMessages: Record<string, string> = {
   'toolDescriptions.qrCodeGenerator': '为URL、文本或联系信息创建自定义二维码，具有样式选项。',
   'toolDescriptions.colorPaletteGenerator': '生成美丽的调色板，具有互补和类似配色方案。',
   'toolDescriptions.textToSpeech': '将文本转换为自然语音，具有多种语音选项和语言。',
+  
+  // Auth
+  'auth.welcomeBack': '欢迎回来',
+  'auth.signInToContinue': '登录您的账户以继续',
+  'auth.emailAddress': '邮箱地址',
+  'auth.enterEmail': '输入您的邮箱',
+  'auth.password': '密码',
+  'auth.enterPassword': '输入您的密码',
+  'auth.rememberMe': '记住我',
+  'auth.forgotPassword': '忘记密码？',
+  'auth.signIn': '登录',
+  'auth.orContinueWith': '或继续使用',
+  'auth.dontHaveAccount': '没有账户？',
+  'auth.signUp': '注册',
+  'auth.backToHome': '返回首页',
+  'auth.termsAgreement': '登录即表示您同意我们的服务条款和隐私政策',
+  'auth.createAccount': '创建您的账户',
+  'auth.joinThousands': '加入数千名用户，立即开始使用我们的工具',
+  'auth.fullName': '姓名',
+  'auth.enterFullName': '输入您的姓名',
+  'auth.confirmPassword': '确认密码',
+  'auth.confirmYourPassword': '确认您的密码',
+  'auth.alreadyHaveAccount': '已有账户？',
+  'auth.github': 'GitHub',
+  'auth.google': 'Google',
+  'auth.forgotPasswordTitle': '忘记密码？',
+  'auth.forgotPasswordDescription': '输入您的邮箱地址，我们将发送密码重置链接给您。',
+  'auth.sendResetLink': '发送重置链接',
+  'auth.rememberPassword': '记得密码？'
 };
 
 const messages = { en: enMessages, zh: zhMessages };
@@ -166,3 +224,4 @@ export function useLanguage() {
   }
   return context;
 }
+
