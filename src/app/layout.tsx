@@ -5,8 +5,8 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Next.js Hello World',
-  description: 'A simple Hello World application built with Next.js, TypeScript, Tailwind CSS, and shadcn/ui',
+  title: 'Tool Board - Your All-in-One Tool Collection',
+  description: 'Discover and use powerful tools for image editing, video processing, document management, and more. Everything you need in one place.',
 };
 
 export default function RootLayout({
