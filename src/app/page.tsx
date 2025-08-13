@@ -9,8 +9,10 @@ import { tools, categories } from '@/data/tools';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { useLanguage } from '@/contexts/language-context';
 
 export default function HomePage() {
+  const { t } = useLanguage();
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
 
@@ -42,10 +44,10 @@ export default function HomePage() {
         {/* Hero Section */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Free Online Tools Ready When You Are
+            {t('hero.title')}
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Professional-grade tools, completely free. No sign-ups required. Just open your browser and get things done instantly.
+            {t('hero.subtitle')}
           </p>
         </div>
 
@@ -72,7 +74,7 @@ export default function HomePage() {
         {searchQuery && (
           <div className="mb-6 text-center">
             <p className="text-gray-600">
-              Found {filteredTools.length} tool{filteredTools.length !== 1 ? 's' : ''} for &ldquo;{searchQuery}&rdquo;
+              {t('search.results').replace('{count}', filteredTools.length.toString()).replace('{plural}', filteredTools.length !== 1 ? 's' : '').replace('{query}', searchQuery)}
             </p>
           </div>
         )}
@@ -92,9 +94,9 @@ export default function HomePage() {
           <div className="text-center py-12">
             <Card className="max-w-md mx-auto">
               <CardHeader>
-                <CardTitle className="text-gray-500">No tools found</CardTitle>
+                <CardTitle className="text-gray-500">{t('tools.noResults')}</CardTitle>
                 <CardDescription>
-                  Try adjusting your search or category filter
+                  {t('tools.noResultsDescription')}
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -105,7 +107,7 @@ export default function HomePage() {
                   }}
                   className="w-full"
                 >
-                  Clear Filters
+                  {t('tools.clearFilters')}
                 </Button>
               </CardContent>
             </Card>
@@ -117,21 +119,21 @@ export default function HomePage() {
           <Card className="text-center">
             <CardHeader>
               <CardTitle className="text-2xl font-bold text-blue-600">{tools.length}+</CardTitle>
-              <CardDescription>Available Tools</CardDescription>
+              <CardDescription>{t('stats.availableTools')}</CardDescription>
             </CardHeader>
           </Card>
           
           <Card className="text-center">
             <CardHeader>
-              <CardTitle className="text-2xl font-bold text-green-600">Free</CardTitle>
-              <CardDescription>No Cost to Use</CardDescription>
+              <CardTitle className="text-2xl font-bold text-green-600">{t('stats.free')}</CardTitle>
+              <CardDescription>{t('stats.noCost')}</CardDescription>
             </CardHeader>
           </Card>
           
           <Card className="text-center">
             <CardHeader>
               <CardTitle className="text-2xl font-bold text-purple-600">24/7</CardTitle>
-              <CardDescription>Always Available</CardDescription>
+              <CardDescription>{t('stats.alwaysAvailable')}</CardDescription>
             </CardHeader>
           </Card>
         </div>
